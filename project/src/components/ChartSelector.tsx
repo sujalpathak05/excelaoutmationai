@@ -145,9 +145,8 @@ export const ChartSelector: React.FC<ChartSelectorProps> = ({ data, userId, uplo
 
   if (analyses.length === 0) {
     return (
-      <div className="text-center py-12">
-        <div className="mb-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div className="text-center py-6 flex flex-col items-center gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full mb-8">
             {chartTypes.map((chart, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
                 <div className="flex flex-col items-center text-center">
@@ -160,17 +159,16 @@ export const ChartSelector: React.FC<ChartSelectorProps> = ({ data, userId, uplo
               </div>
             ))}
           </div>
-        </div>
         
         <button
           onClick={generateAllCharts}
-          className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+          className="flex items-center justify-center flex-wrap space-x-2 px-4 py-4 text-base sm:px-8 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 w-full max-w-sm mx-auto mt-6"
         >
           <Sparkles className="w-5 h-5" />
           <span>Generate All Chart Types & Save to Database</span>
         </button>
         
-        <p className="text-sm text-gray-600 mt-4">
+        <p className="text-sm text-gray-600">
           AI will create Bar, Line, Pie, and Combo charts and save them to your personal dashboard
         </p>
       </div>
@@ -178,7 +176,7 @@ export const ChartSelector: React.FC<ChartSelectorProps> = ({ data, userId, uplo
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 mt-8">
       {/* Chart Navigation */}
       <div className="bg-white rounded-xl shadow-lg p-6">
         <div className="flex items-center justify-between mb-4">
@@ -233,7 +231,7 @@ export const ChartSelector: React.FC<ChartSelectorProps> = ({ data, userId, uplo
       <div className="text-center">
         <button
           onClick={generateAllCharts}
-          className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white font-medium rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+          className="inline-flex items-center space-x-2 px-4 py-3 text-base sm:px-6 sm:py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white font-medium rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200 w-full max-w-sm mx-auto"
         >
           <Sparkles className="w-4 h-4" />
           <span>Regenerate All Charts</span>
