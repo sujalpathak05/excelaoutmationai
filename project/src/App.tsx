@@ -57,9 +57,9 @@ function AppContent({ user }: { user: User }) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b border-gray-200">
+      <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
@@ -67,13 +67,13 @@ function AppContent({ user }: { user: User }) {
                 <BarChart3 className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">Excel Chart Analyzer</h1>
-                <p className="text-sm text-gray-600">AI-powered multi-chart visualization with analytics</p>
+                <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Excel Chart Analyzer</h1>
+                <p className="text-xs sm:text-sm text-gray-600">AI-powered multi-chart visualization with analytics</p>
               </div>
             </div>
             <button
               onClick={resetApp}
-              className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
+              className="px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
             >
               Start Over
             </button>
@@ -81,7 +81,7 @@ function AppContent({ user }: { user: User }) {
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8 overflow-y-auto">
         {/* User Dashboard */}
         <UserDashboard user={user} />
 
@@ -186,7 +186,7 @@ function AppContent({ user }: { user: User }) {
         )}
       </main>
 
-      {/* Footer */}
+      {/* Existing Footer */}
       <footer className="bg-white border-t border-gray-200 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-center space-x-2 text-gray-500">
@@ -202,9 +202,16 @@ function AppContent({ user }: { user: User }) {
 
 function App() {
   return (
-    <AuthWrapper>
-      {(user) => <AppContent user={user} />}
-    </AuthWrapper>
+    <div className="flex flex-col min-h-screen">
+      <AuthWrapper>
+        {(user) => <AppContent user={user} />}
+      </AuthWrapper>
+      <footer className="bg-white border-t border-gray-200 mt-auto py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-800 font-medium">
+          This AI made by Uplakshy Pathak
+        </div>
+      </footer>
+    </div>
   );
 }
 

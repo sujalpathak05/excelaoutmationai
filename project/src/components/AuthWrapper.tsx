@@ -152,7 +152,7 @@ export const AuthWrapper: React.FC<AuthWrapperProps> = ({ children }) => {
   if (!user) {
     if (showVerification) {
       return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center p-4">
+        <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center">
           <div className="max-w-md w-full">
             <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -182,7 +182,7 @@ export const AuthWrapper: React.FC<AuthWrapperProps> = ({ children }) => {
     }
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center p-4">
+      <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center">
         <div className="max-w-md w-full">
           <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-8 md:p-10 lg:p-12">
             <div className="text-center mb-8">

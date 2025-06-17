@@ -226,13 +226,6 @@ export const UserDashboard: React.FC<UserDashboardProps> = ({ user }) => {
           </div>
         </div>
       )}
-
-      {/* Footer */}
-      <div className="mt-8 pt-6 border-t border-gray-200">
-        <p className="text-center text-gray-800 font-medium">
-          This AI made by Uplakshy Pathak
-        </p>
-      </div>
     </div>
   );
 };
