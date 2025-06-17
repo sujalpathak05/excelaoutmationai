@@ -229,7 +229,7 @@ export const UserDashboard: React.FC<UserDashboardProps> = ({ user }) => {
 
       {/* Footer */}
       <div className="mt-8 pt-6 border-t border-gray-200">
-        <p className="text-center text-gray-600 text-sm">
+        <p className="text-center text-gray-800 font-medium">
           This AI made by Uplakshy Pathak
         </p>
       </div>
