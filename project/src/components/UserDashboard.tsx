@@ -145,7 +145,7 @@ export const UserDashboard: React.FC<UserDashboardProps> = ({ user }) => {
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-2xl font-bold text-gray-900">
-            Welcome back, {stats?.profile?.full_name || user.email}!
+            Welcome back, {stats?.profile?.full_name || 'User'}!
           </h2>
           <p className="text-gray-600">Here's your chart analytics overview</p>
         </div>
