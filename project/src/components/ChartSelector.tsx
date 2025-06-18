@@ -145,32 +145,34 @@ export const ChartSelector: React.FC<ChartSelectorProps> = ({ data, userId, uplo
 
   if (analyses.length === 0) {
     return (
-      <div className="w-full text-center py-4 flex flex-col items-center space-y-6">
+      <div className="w-full text-center py-4 flex flex-col items-center space-y-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full">
-            {chartTypes.map((chart, index) => (
-              <div key={index} className="bg-white p-4 sm:p-6 rounded-xl shadow-sm border border-gray-200">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
-                    <chart.icon className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">{chart.name}</h3>
-                  <p className="text-xs text-gray-600">{chart.description}</p>
+          {chartTypes.map((chart, index) => (
+            <div key={index} className="bg-white p-4 sm:p-6 rounded-xl shadow-sm border border-gray-200">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
+                  <chart.icon className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
                 </div>
+                <h3 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">{chart.name}</h3>
+                <p className="text-xs text-gray-600">{chart.description}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
         
-        <button
-          onClick={generateAllCharts}
-          className="w-full max-w-sm mx-auto flex items-center justify-center space-x-2 px-4 py-3 text-sm sm:text-base bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
-        >
-          <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
-          <span>Generate All Chart Types & Save to Database</span>
-        </button>
-        
-        <p className="text-xs sm:text-sm text-gray-600 px-4">
-          AI will create Bar, Line, Pie, and Combo charts and save them to your personal dashboard
-        </p>
+        <div className="w-full max-w-sm mx-auto">
+          <button
+            onClick={generateAllCharts}
+            className="w-full flex items-center justify-center space-x-2 px-4 py-3 text-sm sm:text-base bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+          >
+            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
+            <span>Generate All Chart Types & Save to Database</span>
+          </button>
+          
+          <p className="text-xs sm:text-sm text-gray-600 mt-2 px-4">
+            AI will create Bar, Line, Pie, and Combo charts and save them to your personal dashboard
+          </p>
+        </div>
       </div>
     );
   }
