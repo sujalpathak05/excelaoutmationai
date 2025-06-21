@@ -147,7 +147,7 @@ export const ChartSelector: React.FC<ChartSelectorProps> = ({ data, userId, uplo
     return (
       <>
         <div className="w-full text-center py-4 flex flex-col items-center space-y-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full">
+          <div className="hidden sm:grid sm:grid-cols-2 md:grid-cols-4 gap-4 w-full">
             {chartTypes.map((chart, index) => (
               <div key={index} className="bg-white p-4 sm:p-6 rounded-xl shadow-sm border border-gray-200">
                 <div className="flex flex-col items-center text-center">

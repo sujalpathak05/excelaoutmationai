@@ -207,17 +207,6 @@ function AppContent({ user }: { user: User }) {
           </div>
         )}
       </main>
-
-      {/* Existing Footer */}
-      <footer className="bg-white border-t border-gray-200 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center justify-center space-x-2 text-gray-500">
-            <span>Multi-Chart Excel Analyzer with Database Analytics</span>
-            <span className="text-red-500">♥</span>
-            <span>Bar • Line • Pie • Combo Charts</span>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
