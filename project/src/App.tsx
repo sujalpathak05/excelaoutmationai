@@ -166,34 +166,14 @@ function AppContent({ user }: { user: User }) {
               {selectedSheet && <DataTable data={selectedSheet} />}
             </div>
 
-            {/* Mobile: Show only file name and generate button */}
-            <div className="block sm:hidden text-center my-4">
-              {selectedSheet && (
-                <>
-                  <div className="font-medium text-gray-700 mb-2">
-                    Uploaded: <span className="font-semibold">{selectedSheet.sheetName}</span>
-                  </div>
-                  {currentUploadId && (
-                    <ChartSelector
-                      data={selectedSheet}
-                      userId={user.id}
-                      uploadId={currentUploadId}
-                    />
-                  )}
-                </>
-              )}
-            </div>
-
-            {/* Chart Generation - Only show on desktop */}
-            <div className="hidden sm:block">
-              {selectedSheet && currentUploadId && (
-                <ChartSelector 
-                  data={selectedSheet} 
-                  userId={user.id}
-                  uploadId={currentUploadId}
-                />
-              )}
-            </div>
+            {/* Unified Chart Generation */}
+            {selectedSheet && currentUploadId && (
+              <ChartSelector
+                data={selectedSheet}
+                userId={user.id}
+                uploadId={currentUploadId}
+              />
+            )}
           </div>
         )}
 

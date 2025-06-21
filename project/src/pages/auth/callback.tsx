@@ -18,7 +18,7 @@ export default function AuthCallback() {
           setVerificationStatus('success');
           // Wait for 3 seconds before redirecting
           setTimeout(() => {
-            navigate('/');
+        navigate('/');
           }, 3000);
         }
       } catch (error) {
@@ -35,7 +35,7 @@ export default function AuthCallback() {
       <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center">
         {verificationStatus === 'verifying' && (
           <>
-            <div className="w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mx-auto mb-4" />
+        <div className="w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mx-auto mb-4" />
             <h1 className="text-2xl font-bold text-gray-900 mb-2">Verifying your email...</h1>
             <p className="text-gray-600">Please wait while we verify your email address.</p>
           </>

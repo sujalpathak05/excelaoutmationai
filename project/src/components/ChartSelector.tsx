@@ -174,7 +174,7 @@ export const ChartSelector: React.FC<ChartSelectorProps> = ({ data, userId, uplo
           </div>
         </div>
         {/* Mobile fixed bottom button */}
-        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90vw] sm:hidden z-50">
+        <div className="sm:hidden fixed bottom-0 left-0 right-0 p-4 bg-white/50 backdrop-blur-sm border-t border-gray-200 z-50">
           <button
             onClick={generateAllCharts}
             className="w-full flex items-center justify-center space-x-2 px-4 py-3 text-base bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
